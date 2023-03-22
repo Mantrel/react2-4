@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.viewActive {
+  color: rgb(7, 80, 0);
+  padding-left: 20px;
+}
+
+.view {
+  color: rgb(255, 255, 255);
+  padding-left: 20px;
+}
+
+.navbackground{
+  background-color: rgb(62, 157, 189);
+
+}

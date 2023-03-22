@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import { useNavigate } from 'react-router-dom';
 import ContextoGlob from '../context/ContextoGlob';
 
-function CardPizza({pizza}) {
+function CardPizza({ pizza }) {
 
   const navigate = useNavigate();
 
@@ -17,14 +17,20 @@ function CardPizza({pizza}) {
   const agregarPizza = (pizza) => {
     const idx = pizzasPedidas.findIndex((p) => p.id === pizza.id);
 
-    if (idx > -1 ) {
+    if (idx > -1) {
       pizzasPedidas[idx].cant += 1;
       setPizzasPedidas([...pizzasPedidas]);
     } else {
-      const pizzaSeleccionada = {id:pizza.id, name:pizza.name, price:pizza.price, cant:1};
+      const pizzaSeleccionada = {
+        id: pizza.id,
+        name: pizza.name,
+        price: pizza.price,
+        img: pizza.img,
+        cant: 1
+      };
       setPizzasPedidas([...pizzasPedidas, pizzaSeleccionada]);
     }
-    setTotalPedido(totalPedido+pizza.price)
+    setTotalPedido(totalPedido + pizza.price)
   }
 
   return (
