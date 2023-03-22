@@ -11,7 +11,7 @@ function CardPizza({ pizza }) {
   const { pizzasPedidas, setPizzasPedidas, totalPedido, setTotalPedido } = useContext(ContextoGlob);
 
   const verDetalle = () => {
-    navigate(`/detalles/${pizza.id}`);
+    navigate(`/pizza/${pizza.id}`);
   }
 
   const agregarPizza = (pizza) => {
@@ -38,19 +38,22 @@ function CardPizza({ pizza }) {
       <Card.Img variant="top" src={pizza.img} />
       <Card.Body>
         <Card.Title>{pizza.name}</Card.Title>
+        <div className="lineacard"></div>
         <div>
-          <h5>Ingredientes:</h5>
-          <ul>
+          <p className='ingredientesTitle'>Ingredientes:</p>
+          <ul className='listaing'>
             {
-              pizza.ingredients.map((i) => <li key={i}>🍕 {i}</li>)
+              pizza.ingredients.map((i) => <p key={i} className="ingredientes">🍕 {i}</p>)
             }
           </ul>
         </div>
-        <div>
-          <h4>$ {pizza.price}</h4>
+        <div className='precio'>
+          <p>$ {pizza.price}</p>
         </div>
-        <Button variant="primary" onClick={() => verDetalle()}>Ver mas 👀</Button>
-        <Button variant="danger" onClick={() => agregarPizza(pizza)}>añadir 🛒</Button>
+        <div className='botones'>
+          <Button variant="primary" onClick={() => verDetalle()}>Ver mas 👀</Button>
+          <Button variant="danger" onClick={() => agregarPizza(pizza)}>añadir 🛒</Button>
+        </div>
       </Card.Body>
     </Card>
   );

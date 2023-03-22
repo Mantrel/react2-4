@@ -16,19 +16,16 @@ const Barra = () => {
     <Navbar className='navbackground' expand="lg">
       <Container>
         <Navbar.Brand href="/">
-          <p alt='logo'
-            style={{ padding: "1px", color:"white" }}> 🍕 Pizzería Mamma Mía!</p>
+          <div className='titleNav'>
+            🍕 Pizzería Mamma Mia!
+          </div>
 
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
           <Nav>
-            <NavLink
-              className={({ isActive }) => (isActive ? "viewActive" : "view")}
-              to="/carro" >
-              🛒 $ {totalPedido}
-            </NavLink>
+            <NavLink to="/carrito" className="carrito" > 🛒 $ {totalPedido} </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

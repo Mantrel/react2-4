@@ -8,15 +8,15 @@ const Galeria = () => {
   const { pizzas } = useContext(ContextoGlob)
 
   return (
-    <>
+    <div className='container'>
       <Row >
         {   
           pizzas.map((pizza) => {
-            return <Col key={pizza.id}><CardPizza pizza={pizza}></CardPizza></Col>
+            return <Col key={pizza.id} className="galeriapizzas"><CardPizza pizza={pizza}></CardPizza></Col>
           })
         }
       </Row>
-    </>
+    </div>
   )
 }
 

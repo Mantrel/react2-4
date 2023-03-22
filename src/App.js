@@ -4,8 +4,8 @@ import './index.css';
 import { useEffect, useState } from 'react';
 import Barra from './components/Barra';
 import Home from "./views/Home.jsx"
-import Carro from "./views/Carro.jsx"
-import Detalles from "./views/Detalles.jsx"
+import Carro from "./views/Carrito.jsx"
+import Detalles from "./views/Pizza.jsx"
 import ContextoGlob from "./context/ContextoGlob.jsx"
 
 
@@ -33,8 +33,8 @@ function App() {
         <Barra></Barra>
           <Routes>
             <Route path="/" element={<Home></Home>}></Route>
-            <Route path="/carro" element={<Carro></Carro>}></Route>
-            <Route path="/detalles/:id" element={<Detalles></Detalles>}></Route>
+            <Route path="/carrito" element={<Carro></Carro>}></Route>
+            <Route path="/pizza/:id" element={<Detalles></Detalles>}></Route>
           </Routes>
         </BrowserRouter>
       </ContextoGlob.Provider>

@@ -12,17 +12,127 @@ code {
     monospace;
 }
 
-.viewActive {
-  color: rgb(7, 80, 0);
-  padding-left: 20px;
+.navbackground {
+  background-color: rgb(47, 159, 187);
+  padding: 0;
 }
 
-.view {
-  color: rgb(255, 255, 255);
-  padding-left: 20px;
+.titleNav {
+  color: white;
 }
 
-.navbackground{
-  background-color: rgb(62, 157, 189);
+.carrito{
+  color: white;
+  font-size: 20px;
+}
 
+.headerPizza {
+  background-image: url('https://img.freepik.com/fotos-premium/banner-horizontal-o-encabezado-vista-superior-tres-deliciosas-pizzas-italianas-mesa_387894-715.jpg?w=2000');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+  position: relative;
+  padding: 60px;
+  text-align: center;
+}
+
+.headerPizza:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.headerPizza h1 {
+  font-size: 60px;
+  color: #fff;
+  position: relative
+}
+
+.headerPizza h6 {
+  color: #fff;
+  position: relative
+}
+
+.linea {
+  border-top: 1px solid rgb(104, 104, 104);
+  height: 2px;
+  max-width: 50vw;
+  padding: 0;
+  margin: 20px auto 0 auto;
+  position: relative
+}
+
+.galeriapizzas {
+  padding: 50px;
+}
+
+.lineacard {
+  border-top: 1px solid rgb(180, 180, 180);
+  height: 2px;
+  max-width: 50vw;
+  padding: 10px;
+  margin: 20px auto 0 auto;
+  position: relative
+}
+
+.lineaDetalle {
+  border-top: 1px solid rgb(180, 180, 180);
+  height: 2px;
+  max-width: 50vw;
+  position: relative
+}
+
+.precio {
+  text-align: center;
+  border-top: 0.1px solid rgb(182, 182, 182);
+  padding-top: 25px;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.botones {
+  text-align: center;
+}
+
+.botones Button {
+  margin: 0 5px 0 5px;
+}
+.ingredientesTitle{
+  font-weight: 700;
+}
+
+.ingredientes {
+ padding: 0;
+ margin: 0;
+}
+
+.listaing {
+  padding-bottom: 15px;
+}
+
+.pizzaDetalles {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexPizza {
+  display: flex;
+  flex-direction: column;
+}
+
+.precioPizzaDetalle {
+  padding: 20px;
+}
+
+.descPizzaDetalle {
+  padding: 20px;
+}
+
+.totalPizzas {
+  font-weight: 600;
+  font-size: 30px;
 }
